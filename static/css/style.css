@@ -1,78 +1,46 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f7f7f7;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 30px;
     color: #2c3e50;
 }
 
 #tree-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
+    margin-top: 20px;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #ecf0f1;
+    border-radius: 8px;
 }
 
-.node {
-    display: inline-block;
+.option {
+    margin: 5px 0;
     padding: 8px 12px;
-    margin: 6px;
-    background-color: #3498db;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.node:hover {
-    background-color: #2980b9;
-}
-
-#add-option-btn {
-    margin: 20px auto;
-    display: block;
-    padding: 10px 20px;
-    background-color: #2ecc71;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-#add-option-btn:hover {
     background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.option:hover {
+    background-color: #2ecc71;
 }
 
 .popup {
     position: fixed;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 20px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    z-index: 1000;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #333;
+    z-index: 100;
 }
 
 .hidden {
     display: none;
-}
-
-.popup form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.popup input {
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
     }
