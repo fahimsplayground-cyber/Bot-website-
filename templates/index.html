@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Role Tree Panel</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Discord Role Tree</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <h1>Role Tree Panel</h1>
-
+    <h1>Discord Role Tree Control Panel</h1>
+    <button id="addRootBtn">+ Add Root Node</button>
     <div id="tree"></div>
 
-    <div id="add-node-container">
-        <input type="text" id="new-node-label" placeholder="Node label">
-        <select id="parent-node-select">
-            <option value="">-- No parent (top-level) --</option>
-        </select>
-        <button id="add-node-btn">Add Node</button>
+    <!-- Modal for adding/editing nodes -->
+    <div id="nodeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="nodeForm">
+                <input type="hidden" id="nodeId">
+                <input type="hidden" id="parentId">
+                <label>Label:</label>
+                <input type="text" id="label" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
     </div>
 
-    <script src="/static/script.js"></script>
+    <script src="/static/js/tree.js"></script>
 </body>
 </html>
