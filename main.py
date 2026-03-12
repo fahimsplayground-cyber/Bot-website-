@@ -17,7 +17,6 @@ templates = Jinja2Templates(directory="templates")
 # ---------------- ROUTES ----------------
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    # Fetch all nodes from Supabase
     nodes = supabase.table("roles").select("*").execute()
     return templates.TemplateResponse("index.html", {"request": request, "nodes": nodes.data})
 
