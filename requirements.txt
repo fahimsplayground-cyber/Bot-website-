@@ -1,5 +1,5 @@
 fastapi
-jinja2
 uvicorn
 supabase
-python-dotenv
+jinja2
+python-multipart
