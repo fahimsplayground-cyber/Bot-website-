@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Role Control Panel</title>
-  <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <title>Role Tree Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <h1>Role Tree Panel</h1>
-  <div id="tree"></div>
-  <script src="/static/script.js"></script>
+    <h1>Role Tree Panel</h1>
+
+    <div id="tree"></div>
+
+    <div id="add-node-container">
+        <input type="text" id="new-node-label" placeholder="Node label">
+        <select id="parent-node-select">
+            <option value="">-- No parent (top-level) --</option>
+        </select>
+        <button id="add-node-btn">Add Node</button>
+    </div>
+
+    <script src="/static/script.js"></script>
 </body>
 </html>
