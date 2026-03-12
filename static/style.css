@@ -1,82 +1,66 @@
-/* Global styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #f0f2f5;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-/* Page header */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
 h1 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 30px;
 }
 
-/* Tree container */
-#tree {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+#tree-container {
+    margin-top: 20px;
 }
 
-/* Node style */
 .node {
+    display: inline-block;
     padding: 8px 12px;
-    margin: 6px 0;
-    background: #3498db;
-    color: #fff;
+    margin: 6px;
+    background-color: #3498db;
+    color: white;
     border-radius: 6px;
     cursor: pointer;
-    display: inline-block;
+    transition: 0.2s;
 }
 
-/* Node hover effect */
 .node:hover {
-    background: #2980b9;
+    background-color: #2980b9;
 }
 
-/* Node edit form */
-.node-form {
+.form-container {
+    margin-top: 30px;
     display: flex;
-    gap: 8px;
-    margin-top: 6px;
+    gap: 10px;
+    justify-content: center;
 }
 
-.node-form input {
-    padding: 4px 8px;
-    border-radius: 4px;
+.form-container input,
+.form-container select,
+.form-container button {
+    padding: 8px 12px;
+    border-radius: 6px;
     border: 1px solid #ccc;
-    flex: 1;
+    font-size: 16px;
 }
 
-.node-form button {
-    padding: 4px 10px;
-    border-radius: 4px;
-    border: none;
+.form-container button {
     background-color: #2ecc71;
     color: white;
+    border: none;
     cursor: pointer;
 }
 
-.node-form button:hover {
+.form-container button:hover {
     background-color: #27ae60;
-}
-
-/* Add node button */
-#add-node-btn {
-    margin-top: 10px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background-color: #e67e22;
-    color: white;
-    cursor: pointer;
-}
-
-#add-node-btn:hover {
-    background-color: #d35400;
 }
