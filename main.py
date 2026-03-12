@@ -44,9 +44,9 @@ def get_tree():
     return {"tree": TREE}
 
 @app.post("/add_node")
-def add_node(label: str = Form(...), question: str = Form(...), role_id: str = Form(None)):
+def add_node(label: str = Form(...), question: str = Form(...), role_id: str = Form(None), parent_id: str = Form(None)):
     node_id = str(uuid.uuid4())
-    node = {"id": node_id, "label": label, "question": question, "role_id": role_id}
+    node = {"id": node_id, "label": label, "question": question, "role_id": role_id, "parent_id": parent_id}
     TREE.append(node)
     try:
         supabase.table("nodes").insert(node).execute()
